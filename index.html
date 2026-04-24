@@ -547,7 +547,7 @@ function render(){
   // ── Render to DOM ─────────────────────────────
   document.getElementById('app').innerHTML=`
     <div style="padding:4px 0 10px;display:flex;align-items:center;justify-content:space-between">
-      <p style="font-size:11px;color:var(--tx2)">${new Date().toLocaleDateString('en-NG',{weekday:'long',dateStyle:'long'})}</p>
+      <p style="font-size:11px;color:var(--tx2)">${new Date().toLocaleDateString('en-NG',{weekday:'long',year:'numeric',month:'long',day:'numeric'})}</p>
       <span style="font-size:10px;padding:3px 9px;background:var(--abg);color:var(--atx);border:.5px solid var(--abd);border-radius:6px;font-weight:500">NGN ₦</span>
     </div>
     <div class="tabs">${TABS.map(t=>`<button class="tab ${tab===t.id?'on':''}" data-tab="${t.id}">${t.l}</button>`).join('')}</div>
